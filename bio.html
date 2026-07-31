@@ -72,6 +72,17 @@
     flex: 1;
   }
   @media (min-width: 1200px) { .content { grid-template-columns: repeat(3, 1fr); } }
+  @media (max-width: 600px) {
+    .col { display: contents; }
+    .col p + p { margin-top: 0; }
+    .credentials-first { order: -1; }
+  }
+
+  .credential-names {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: calc(1em + 1px);
+    color: #bdbdba;
+  }
 
   .col p {
     font-size: clamp(1rem, 1.05vw, 1.08rem);
@@ -128,8 +139,8 @@
       </div>
 
       <div class="col">
-        <p>He has collaborated with brands such as: Intimissimi, Gucci, Giada Montenapoleone, Elisabetta Franchi, Piquadro, Murphy&amp;Nye, Carrera Jeans, Asti Vini USA, Liu Jo, Autry, Aquardens, Diadora, Calliope, Armani Kids, Marina Rinaldi, Luisa Spagnoli, Tezenis, Gruppo Teddy, and photographed celebrities including Ascanio Pacelli, Santiago Gim&eacute;nez, Michelle Salas, Francesca Chillemi.</p>
-        <p>His work has appeared in international magazines including GQ, Vogue Taiwan, Harper&rsquo;s Bazaar, L&rsquo;Officiel Arabia, Mojeh x Gucci, Sch&ouml;n!, Num&eacute;ro, FV Magazine New York, Man in Town.</p>
+        <p class="credentials-first">He has collaborated with brands such as: <span class="credential-names">Intimissimi, Gucci, Giada Montenapoleone, Elisabetta Franchi, Piquadro, Murphy&amp;Nye, Carrera Jeans, Asti Vini USA, Liu Jo, Autry, Aquardens, Diadora, Calliope, Armani Kids, Marina Rinaldi, Luisa Spagnoli, Tezenis, Gruppo Teddy</span>, and photographed celebrities and athletes including <span class="credential-names">Ascanio Pacelli, Santiago Gim&eacute;nez, Michelle Salas, Francesca Chillemi, Jasmine Paolini, Luka Modri&#263;, Federica Brignone</span>.</p>
+        <p class="credentials-first">His work has appeared in international magazines including <span class="credential-names">GQ, Vogue Taiwan, Harper&rsquo;s Bazaar, L&rsquo;Officiel Arabia, Mojeh x Gucci, Sch&ouml;n!, Num&eacute;ro, FV Magazine New York, Man in Town</span>.</p>
         <p>Today, his practice is marked by a constant search for essence and for the unexpected. For Compagni, photography and film are not only tools of representation, but ways of creating worlds &mdash; where form, imperfection and sensitivity come together to tell stories that resist predictability.</p>
       </div>
 
