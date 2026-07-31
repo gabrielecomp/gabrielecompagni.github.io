@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<!-- ═══════════════════════════════════════════════════════════════
+     GABRIELE COMPAGNI — portfolio
+     Intestazione come la bio, PDF full width sotto.
+     Per aggiornare il portfolio: sostituisci il file "portfolio.pdf",
+     il layout resta identico.
+     ═══════════════════════════════════════════════════════════════ -->
+
+<title>gabriele compagni — portfolio</title>
+<meta name="description" content="fashion photographer and commercial filmmaker — portfolio" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@400;500&display=swap" rel="stylesheet" />
+
+<style>
+  :root{
+    --black:#000; --white:#f6f6f3; --muted:#8c8c88;
+    --pad:clamp(1.25rem, 4.5vw, 3.5rem);
+    --ff:"American Typewriter","Zilla Slab","Rockwell","Courier New",serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{height:100%}
+  body{
+    background:var(--black);
+    color:var(--white);
+    font-family:var(--ff);
+    font-weight:400;
+    -webkit-font-smoothing:antialiased;
+    height:100dvh;
+    display:flex;
+    flex-direction:column;
+    overflow:hidden;
+  }
+
+  /* ── Intestazione, come nella bio ── */
+  .masthead{
+    flex:0 0 auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+    padding:var(--pad);
+    font-size:clamp(.72rem, 1vw, .82rem);
+    letter-spacing:.14em;
+    text-transform:uppercase;
+  }
+  .masthead a{color:var(--white);text-decoration:none;transition:color .3s ease}
+  .masthead a:hover,.masthead a:focus-visible{color:var(--muted)}
+  .masthead a:focus-visible{outline:1px solid var(--white);outline-offset:5px}
+  .masthead .tag{color:var(--muted)}
+
+  /* ── PDF a tutta larghezza ── */
+  .viewer{
+    flex:1 1 auto;
+    min-height:0;
+    width:100%;
+    border:0;
+    display:block;
+    background:var(--black);
+  }
+</style>
+</head>
+
+<body>
+  <header class="masthead">
+    <a href="index.html">gabriele compagni</a>
+    <span class="tag">portfolio</span>
+  </header>
+
+  <iframe class="viewer"
+          src="portfolio.pdf#toolbar=0&navpanes=0&statusbar=0&view=FitH"
+          title="Portfolio — Gabriele Compagni"></iframe>
+</body>
+</html>
