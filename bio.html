@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<!-- ═══════════════════════════════════════════════════════════════
+     GABRIELE COMPAGNI — bio (pagina editoriale bianca, come le pagine
+     interne del portfolio). Da personalizzare:
+       ◆ l'email di contatto (in fondo, in due punti: testo e mailto)
+     ═══════════════════════════════════════════════════════════════ -->
+
+<title>gabriele compagni — bio</title>
+<meta name="description" content="fashion photographer and commercial filmmaker" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@400;500&display=swap" rel="stylesheet" />
+
+<style>
+  :root {
+    --paper: #000000;   /* nero, come la copertina */
+    --ink:   #f6f6f3;   /* testo chiaro */
+    --muted: #8c8c88;   /* grigio delle etichette */
+    --pad:   clamp(1.5rem, 4.5vw, 4rem);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "American Typewriter", "Zilla Slab", "Rockwell", "Courier New", serif;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  .page {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: var(--pad);
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* ── Testata, come nel portfolio ── */
+  .masthead {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-size: clamp(.72rem, 1vw, .82rem);
+    font-weight: 400;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    margin-bottom: clamp(2.5rem, 7vh, 5rem);
+  }
+  .masthead a { color: var(--ink); text-decoration: none; transition: color .3s ease; }
+  .masthead a:hover, .masthead a:focus-visible { color: var(--muted); }
+  .masthead a:focus-visible { outline: 1px solid var(--ink); outline-offset: 5px; }
+  .masthead .tag { color: var(--muted); }
+
+  /* ── Corpo in colonne ── */
+  .content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: clamp(1.6rem, 3vw, 3.4rem);
+    flex: 1;
+  }
+  @media (min-width: 1200px) { .content { grid-template-columns: repeat(3, 1fr); } }
+
+  .col p {
+    font-size: clamp(1rem, 1.05vw, 1.08rem);
+    line-height: 1.52;
+    font-weight: 400;
+    text-align: justify;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+  }
+  .col p + p { margin-top: 1.1em; }
+
+  /* ── Contatto ── */
+  .foot {
+    margin-top: clamp(2.5rem, 7vh, 5rem);
+    font-size: clamp(.78rem, .9vw, .86rem);
+    letter-spacing: .04em;
+    color: var(--muted);
+  }
+  .foot a {
+    position: relative; color: var(--ink); text-decoration: none; padding-bottom: 2px;
+  }
+  .foot a::after {
+    content: ""; position: absolute; left: 0; bottom: 0; width: 100%; height: 1px;
+    background: var(--ink); transform: scaleX(0); transform-origin: left;
+    transition: transform .3s ease;
+  }
+  .foot a:hover::after, .foot a:focus-visible::after { transform: scaleX(1); }
+  .foot a:focus-visible { outline: 1px solid var(--ink); outline-offset: 5px; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .masthead a, .foot a::after { transition: none; }
+  }
+</style>
+</head>
+
+<body>
+  <main class="page">
+
+    <header class="masthead">
+      <a href="index.html">gabriele compagni</a>
+      <span class="tag">bio</span>
+    </header>
+
+    <div class="content">
+
+      <div class="col">
+        <p>Gabriele Compagni approached photography in a spontaneous way, driven by the need to tell stories through images. Long before the word &ldquo;storytelling&rdquo; became a clich&eacute;, he was already shaping his experiences into visual narratives, making sure no detail was missing. His first steps were on film, first with compact cameras and later with a Contax and a single 50mm lens, often in black and white. The reduced palette allowed him to focus on what would become a constant in his work: the essence of forms. Shapes remain his main obsession, sometimes almost graphic, often imperfect and unexpected, carrying with them a raw kind of beauty.</p>
+        <p>This attention to form and essence has accompanied him through different phases of life, even beyond photography &mdash; from alpinism in high mountains to writing and painting. Yet photography always returned as the red thread linking it all. Later came cinema: fascinated by its ability to create a &ldquo;look,&rdquo; to shape worlds through light, depth and colors, he directed his first short film in 2013 and never abandoned the path. Studies in fashion film and the mentorship of a cinematographer deepened his commitment to visual language, leading him naturally into directing alongside photography.</p>
+      </div>
+
+      <div class="col">
+        <p>His practice combines preparation and openness: reference and structure on one side, the unpredictability of the human encounter on the other. For him, the set is not a rigid storyboard but a space where improvisation can spark something true. His style is signed by a love for film grain, by handheld gestures in moving image, and by the acceptance of a certain &ldquo;creative disorder&rdquo; &mdash; a necessary phase before clarity emerges.</p>
+        <p>Parallel to commercial work, he has carried on personal projects that define his artistic identity: an award-winning artbook created for an industrial company, a long-term photographic series on musicians and backstage life inspired by Guido Harari, a collection of poetry soon to be published, and a body of paintings that extend his exploration of form. Carrying a camera everywhere, he continues to build an archive of spontaneous images, fragments of a visual diary.</p>
+      </div>
+
+      <div class="col">
+        <p>He has collaborated with brands such as: Intimissimi, Gucci, Giada Montenapoleone, Elisabetta Franchi, Piquadro, Murphy&amp;Nye, Carrera Jeans, Asti Vini USA, Liu Jo, Autry, Aquardens, Diadora, Calliope, Armani Kids, Marina Rinaldi, Luisa Spagnoli, Tezenis, Gruppo Teddy, and photographed celebrities including Ascanio Pacelli, Santiago Gim&eacute;nez, Michelle Salas, Francesca Chillemi.</p>
+        <p>His work has appeared in international magazines including GQ, Vogue Taiwan, Harper&rsquo;s Bazaar, L&rsquo;Officiel Arabia, Mojeh x Gucci, Sch&ouml;n!, Num&eacute;ro, FV Magazine New York, Man in Town.</p>
+        <p>Today, his practice is marked by a constant search for essence and for the unexpected. For Compagni, photography and film are not only tools of representation, but ways of creating worlds &mdash; where form, imperfection and sensitivity come together to tell stories that resist predictability.</p>
+      </div>
+
+    </div>
+
+    <footer class="foot">
+      info@gabrielecompagni.com
+    </footer>
+
+  </main>
+</body>
+</html>
