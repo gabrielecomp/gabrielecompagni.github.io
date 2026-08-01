@@ -45,6 +45,11 @@
     font-size:clamp(.72rem, 1vw, .82rem); letter-spacing:.14em; text-transform:uppercase;
   }
   .masthead a{color:var(--white);text-decoration:none;transition:color .3s ease}
+  .masthead a:first-child{position:relative}
+  .masthead a:first-child::before{
+    content:"";position:absolute;left:50%;top:50%;width:48px;height:44px;
+    transform:translate(-50%,-50%);
+  }
   .masthead a:hover,.masthead a:focus-visible{color:var(--muted)}
   .masthead a:focus-visible{outline:1px solid var(--white);outline-offset:5px}
   .masthead .tag{color:var(--muted)}
@@ -93,6 +98,10 @@
     color:var(--white); font-size:1.6rem; line-height:1;
     background:none; border:0; cursor:pointer; padding:.3rem;
     font-family:var(--ff);
+  }
+  .lightbox .close::before{
+    content:"";position:absolute;left:50%;top:50%;width:48px;height:48px;
+    transform:translate(-50%,-50%);
   }
   .lightbox .close:hover{ color:var(--muted); }
 
