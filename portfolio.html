@@ -67,6 +67,17 @@
     margin-inline:auto;
     cursor:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24"><g fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l16 16"/><path d="M4 11V4h7"/><path d="M20 13v7h-7"/></g></svg>') 6 6, zoom-in;
   }
+  .portfolio-description{
+    width:calc(100% - 3rem);
+    max-width:52rem;
+    margin:clamp(1.8rem,4vw,3rem) auto;
+    background:var(--black);
+    color:var(--muted);
+    font-size:12px;
+    font-weight:400;
+    line-height:1.45;
+    opacity:1;
+  }
 
   /* ── Overlay a tutto schermo (lightbox) ── */
   /* cursore ⤡ "riduci": freccia doppia diagonale verso l'interno, nera */
@@ -502,6 +513,7 @@
         alt="Final portfolio page with fashion photography by Gabriele Compagni, photographer and video director"
         loading="lazy" decoding="async"
       />
+    <p class="portfolio-description">Selected photography and filmmaking by Gabriele Compagni, created internationally across Milan and New York. The portfolio brings together fashion editorials, commercial campaigns, celebrity and athlete photography, and personal art projects exploring form, imperfection and human essence.</p>
   </main>
 
   <!-- Overlay per l'ingrandimento a tutto schermo -->
