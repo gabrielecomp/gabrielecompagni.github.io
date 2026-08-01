@@ -94,6 +94,22 @@
     object-fit:contain;
     display:block;
   }
+  .lightbox.has-project img{max-height:calc(100% - 4.5rem)}
+  .project-reference{
+    position:fixed;z-index:103;
+    display:flex;align-items:center;flex-wrap:wrap;
+    min-height:44px;
+    background:var(--black);color:var(--muted);
+    font-size:clamp(12px,1vw,14px);line-height:1.4;
+  }
+  .project-reference[hidden]{display:none}
+  .project-reference a{
+    min-height:44px;display:inline-flex;align-items:center;
+    padding-inline:.35rem;
+    color:var(--white);text-decoration:none;
+  }
+  .project-reference a:hover{color:var(--muted)}
+  .project-reference a:focus-visible{outline:1px solid var(--white);outline-offset:2px}
   .lightbox .nav-zone{
     position:fixed; z-index:101;
     background:transparent; border:0; padding:0;
@@ -189,6 +205,7 @@
         srcset="portfolio-images/portfolio-gabriele-compagni-fashion-photographer-video-director-05-800.webp 800w, portfolio-images/portfolio-gabriele-compagni-fashion-photographer-video-director-05-1600.webp 1600w"
         sizes="(max-width: 1500px) 100vw, 1500px"
         data-full="portfolio-images/portfolio-gabriele-compagni-fashion-photographer-video-director-05-1600.webp"
+        data-project="mojeh"
         width="1600"
         height="1132"
         alt="MOJEH x Gucci special fashion editorial photographed by Gabriele Compagni"
@@ -200,6 +217,7 @@
         srcset="portfolio-images/portfolio-gabriele-compagni-fashion-photographer-video-director-06-800.webp 800w, portfolio-images/portfolio-gabriele-compagni-fashion-photographer-video-director-06-1600.webp 1600w"
         sizes="(max-width: 1500px) 100vw, 1500px"
         data-full="portfolio-images/portfolio-gabriele-compagni-fashion-photographer-video-director-06-1600.webp"
+        data-project="mojeh"
         width="1600"
         height="1132"
         alt="Gucci fashion story for the MOJEH special editorial, photographed by Gabriele Compagni"
@@ -222,6 +240,7 @@
         srcset="portfolio-images/portfolio-gabriele-compagni-fashion-photographer-video-director-08-800.webp 800w, portfolio-images/portfolio-gabriele-compagni-fashion-photographer-video-director-08-1600.webp 1600w"
         sizes="(max-width: 1500px) 100vw, 1500px"
         data-full="portfolio-images/portfolio-gabriele-compagni-fashion-photographer-video-director-08-1600.webp"
+        data-project="luka"
         width="1600"
         height="1132"
         alt="AC Milan footballer Luka Modrić photographed by Gabriele Compagni for the global Kalshi campaign"
@@ -277,6 +296,7 @@
         srcset="portfolio-images/portfolio-gabriele-compagni-fashion-photographer-video-director-13-800.webp 800w, portfolio-images/portfolio-gabriele-compagni-fashion-photographer-video-director-13-1600.webp 1600w"
         sizes="(max-width: 1500px) 100vw, 1500px"
         data-full="portfolio-images/portfolio-gabriele-compagni-fashion-photographer-video-director-13-1600.webp"
+        data-project="mojeh"
         width="1600"
         height="1132"
         alt="Gucci fashion editorial created for the MOJEH special and photographed by Gabriele Compagni"
@@ -288,6 +308,7 @@
         srcset="portfolio-images/portfolio-gabriele-compagni-fashion-photographer-video-director-14-800.webp 800w, portfolio-images/portfolio-gabriele-compagni-fashion-photographer-video-director-14-1600.webp 1600w"
         sizes="(max-width: 1500px) 100vw, 1500px"
         data-full="portfolio-images/portfolio-gabriele-compagni-fashion-photographer-video-director-14-1600.webp"
+        data-project="mojeh"
         width="1600"
         height="1132"
         alt="MOJEH x Gucci special editorial fashion images by Gabriele Compagni"
@@ -520,6 +541,8 @@
   <div class="lightbox" id="lightbox">
     <button class="close" id="close" aria-label="Chiudi">&times;</button>
     <img id="lightbox-img" src="" alt="" />
+    <div class="project-reference" data-project-link="mojeh" hidden><span>Mojeh Special Gucci — </span><a href="projects/mojeh-gucci.html">View project</a></div>
+    <div class="project-reference" data-project-link="luka" hidden><span>Luka Modrić — </span><a href="projects/luka-modric-kalshi.html">View project</a></div>
     <button class="nav-zone prev" id="previous-page" aria-label="Pagina precedente"></button>
     <button class="nav-zone dismiss" id="dismiss-lightbox" aria-label="Chiudi immagine ingrandita"></button>
     <button class="nav-zone next" id="next-page" aria-label="Pagina successiva"></button>
@@ -535,6 +558,7 @@
       var previousPage = document.getElementById('previous-page');
       var dismissLightbox = document.getElementById('dismiss-lightbox');
       var nextPage = document.getElementById('next-page');
+      var projectReferences = document.querySelectorAll('[data-project-link]');
       var masthead = document.querySelector('.masthead');
       function updateMastheadHeight(){
         document.documentElement.style.setProperty('--masthead-h', masthead.offsetHeight + 'px');
@@ -543,6 +567,11 @@
       window.addEventListener('resize', updateMastheadHeight);
       function show(index){
         currentIndex = (index + pages.length) % pages.length;
+        var project = pages[currentIndex].dataset.project || '';
+        lb.classList.toggle('has-project', Boolean(project));
+        projectReferences.forEach(function(reference){
+          reference.hidden = reference.dataset.projectLink !== project;
+        });
         lbImg.src = pages[currentIndex].dataset.full;
         lbImg.alt = pages[currentIndex].alt;
         if(lbImg.complete) requestAnimationFrame(updateNavigationZones);
@@ -556,6 +585,12 @@
           zone.style.top = rect.top + 'px';
           zone.style.width = width + 'px';
           zone.style.height = rect.height + 'px';
+        });
+        projectReferences.forEach(function(reference){
+          if(reference.hidden) return;
+          reference.style.left = rect.left + 'px';
+          reference.style.top = rect.bottom + 'px';
+          reference.style.width = rect.width + 'px';
         });
       }
       function open(index){ lb.classList.add('open'); document.body.style.overflow='hidden'; show(index); }
