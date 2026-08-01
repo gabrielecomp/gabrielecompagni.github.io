@@ -114,6 +114,26 @@
   .statement .name    { display: block; color: var(--white); }
   .statement .tagline { display: block; color: var(--cream); }
 
+  .intro {
+    position: absolute;
+    left: var(--pad);
+    right: var(--pad);
+    bottom: calc(var(--pad) + 3.5rem);
+    max-width: 52rem;
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.45;
+  }
+
+  @media (max-width: 600px) {
+    .intro {
+      left: clamp(1.25rem, 5vw, 2rem);
+      right: clamp(1.25rem, 5vw, 2rem);
+      bottom: calc(clamp(1.25rem, 5vw, 2rem) + 3.8rem);
+    }
+  }
+
   /* ── Link ── */
   .links {
     display: flex;
@@ -164,6 +184,8 @@
       <span class="name">gabriele compagni:</span>
       <span class="tagline">seeking the strength beauty into<br>the human essence</span>
     </h1>
+
+    <p class="intro">Gabriele Compagni is an Italian photographer and video director working across Milan and New York, creating photography and film for fashion, commercial campaigns and personal art projects.</p>
 
     <nav class="links" aria-label="Portfolio">
       <a href="portfolio.html">portfolio</a>
