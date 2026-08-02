@@ -85,6 +85,27 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     line-height:1.45;
     opacity:1;
   }
+  .portfolio-contact{
+    width:min(100%, 1400px);
+    margin:0 auto clamp(2.5rem,7vh,5rem);
+    padding-inline:clamp(1.5rem,4.5vw,4rem);
+    font-size:clamp(.78rem,.9vw,.86rem);
+    letter-spacing:.04em;
+    color:var(--muted);
+  }
+  .portfolio-contact a{
+    position:relative;
+    color:var(--muted);
+    text-decoration:none;
+    padding-bottom:2px;
+  }
+  .portfolio-contact a::after{
+    content:"";position:absolute;left:0;bottom:0;width:100%;height:1px;
+    background:var(--white);transform:scaleX(0);transform-origin:left;
+    transition:transform .3s ease;
+  }
+  .portfolio-contact a:hover::after,.portfolio-contact a:focus-visible::after{transform:scaleX(1)}
+  .portfolio-contact a:focus-visible{outline:1px solid var(--white);outline-offset:5px}
 
   /* ── Overlay a tutto schermo (lightbox) ── */
   /* cursore ⤡ "riduci": freccia doppia diagonale verso l'interno, nera */
@@ -546,6 +567,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         loading="lazy" decoding="async"
       />
     <p class="portfolio-description">Selected photography and filmmaking by Gabriele Compagni, created internationally across Milan and New York. The portfolio brings together fashion editorials, commercial campaigns, celebrity and athlete photography, and personal art projects exploring form, imperfection and human essence.</p>
+    <footer class="portfolio-contact">
+      <a href="mailto:info@gabrielecompagni.com">info@gabrielecompagni.com</a>
+    </footer>
   </main>
 
   <!-- Overlay per l'ingrandimento a tutto schermo -->
