@@ -281,7 +281,7 @@
   <!-- End Google Tag Manager (noscript) -->
 
   <header class="masthead">
-    <a href="../portfolio.html">back</a>
+    <a href="../portfolio.html" class="to-portfolio">back</a>
     <p class="tag">luka modri&#263;</p>
   </header>
 
@@ -370,7 +370,7 @@
       <p style="margin-top:1.6rem; max-width:62ch;">Gabriele Compagni is an Italian fashion and
       advertising photographer and video director working between Milan and New York, shooting
       celebrity campaigns, editorial portraits and commercial campaign photography for international
-      brands. <a href="../index.html" style="color:#e8e6df; border-bottom:1px solid #2c2c28; text-decoration:none;">See more work</a>.</p>
+      brands. <a href="../portfolio.html" class="to-portfolio" style="color:#e8e6df; border-bottom:1px solid #2c2c28; text-decoration:none;">See more work</a>.</p>
     </section>
 
     <section class="sources">
@@ -386,6 +386,19 @@
   </main>
 
   <script>
+    (function () {
+      var fromPortfolio = document.referrer.indexOf('/portfolio.html') !== -1;
+      if (fromPortfolio && history.length > 1) {
+        var links = document.querySelectorAll('a.to-portfolio');
+        for (var i = 0; i < links.length; i++) {
+          links[i].addEventListener('click', function (e) {
+            e.preventDefault();
+            history.back();
+          });
+        }
+      }
+    })();
+
     (function () {
       var v = document.getElementById('video');
       if (!v) return;
