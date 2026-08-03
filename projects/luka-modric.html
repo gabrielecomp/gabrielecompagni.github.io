@@ -12,10 +12,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" href="../favicon.ico" sizes="any" />
   <link rel="canonical" href="https://gabrielecompagni.com/projects/luka-modric.html" />
-  <title>Luka Modrić | AC Milan — Kalshi World Campaign | Gabriele Compagni</title>
-  <meta name="description" content="Luka Modrić photographed by Gabriele Compagni for the global Kalshi campaign, a portrait project featuring the AC Milan and Croatia footballer." />
-  <meta property="og:title" content="Luka Modrić | AC Milan — Kalshi World Campaign | Gabriele Compagni" />
-  <meta property="og:description" content="Luka Modrić photographed by Gabriele Compagni for the global Kalshi campaign, a portrait project featuring the AC Milan and Croatia footballer." />
+  <title>Luka Modri&#263; &times; Kalshi &mdash; Celebrity Campaign Photography | Gabriele Compagni</title>
+  <meta name="description" content="Celebrity campaign photography by Gabriele Compagni: Luka Modric for Kalshi's international campaign, 2026 FIFA World Cup. Italian fashion and advertising photographer, Milan and New York." />
+  <meta property="og:title" content="Luka Modri&#263; &times; Kalshi &mdash; Celebrity Campaign Photography | Gabriele Compagni" />
+  <meta property="og:description" content="Celebrity campaign photography by Gabriele Compagni: Luka Modric for Kalshi's international campaign, 2026 FIFA World Cup." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://gabrielecompagni.com/projects/luka-modric.html" />
+  <meta property="og:image" content="https://gabrielecompagni.com/projects/projects-images/luka-modric-kalshi-campaign-gabriele-compagni-1600.webp" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Luka Modri&#263; &times; Kalshi &mdash; Celebrity Campaign Photography | Gabriele Compagni" />
+  <meta name="twitter:description" content="Celebrity campaign photography by Gabriele Compagni: Luka Modric for Kalshi's international campaign, 2026 FIFA World Cup." />
+  <meta name="twitter:image" content="https://gabrielecompagni.com/projects/projects-images/luka-modric-kalshi-campaign-gabriele-compagni-1600.webp" />
 
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preload" href="https://fonts.gstatic.com/s/zillaslab/v12/dFa6ZfeM_74wlPZtksIFajo6_V6LVlA.woff2" as="font" type="font/woff2" crossorigin />
@@ -33,7 +40,9 @@
     :root {
       --black: #000;
       --white: #f6f6f3;
+      --cream: #e8e6df;
       --muted: #8c8c88;
+      --line: #23231f;
       --pad: clamp(1.25rem, 4.5vw, 3.5rem);
       --ff: "American Typewriter", "Zilla Slab", "Rockwell", "Courier New", serif;
     }
@@ -74,8 +83,169 @@
     .masthead a:focus-visible { outline: 1px solid var(--white); outline-offset: 5px; }
     .masthead .tag { color: var(--muted); font: inherit; }
 
+    /* Impaginato progetto */
+    .wrap {
+      width: min(100%, 1400px);
+      margin-inline: auto;
+      padding: 0 var(--pad) clamp(4rem, 10vw, 8rem);
+    }
+
+    .eyebrow {
+      color: var(--muted);
+      font-size: clamp(.7rem, .95vw, .78rem);
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      margin-bottom: 1.4rem;
+    }
+
+    .title {
+      font-weight: 400;
+      font-size: clamp(1.9rem, 5.2vw, 3.4rem);
+      line-height: 1.06;
+      letter-spacing: -0.012em;
+      max-width: 22ch;
+      margin-bottom: 1.6rem;
+    }
+
+    .standfirst {
+      color: var(--cream);
+      font-size: clamp(1rem, 1.5vw, 1.2rem);
+      line-height: 1.5;
+      max-width: 62ch;
+      margin-bottom: 2.6rem;
+    }
+
+    figure { margin: 0; }
+    .hero img { display: block; width: 100%; height: auto; background: #111; }
+    .hero { max-width: 900px; margin: 0 0 .9rem; }
+    figcaption {
+      color: var(--muted);
+      font-size: .78rem;
+      line-height: 1.5;
+      letter-spacing: .02em;
+      max-width: 62ch;
+      margin-bottom: 3.5rem;
+    }
+
+    .article {
+      max-width: 68ch;
+      font-size: clamp(.95rem, 1.15vw, 1.05rem);
+      line-height: 1.72;
+      color: var(--cream);
+    }
+    .article h2 {
+      font-weight: 400;
+      font-size: clamp(1.15rem, 1.9vw, 1.45rem);
+      line-height: 1.25;
+      color: var(--white);
+      margin: 2.8rem 0 .9rem;
+      letter-spacing: -0.008em;
+    }
+    .article p { margin-bottom: 1.15rem; }
+    .article a {
+      color: var(--white);
+      text-decoration: none;
+      border-bottom: 1px solid #3a3a35;
+      transition: border-color .3s ease, color .3s ease;
+    }
+    .article a:hover, .article a:focus-visible { border-color: var(--white); }
+    .article a:focus-visible { outline: 1px solid var(--white); outline-offset: 3px; }
+    .article strong { font-weight: 400; color: var(--white); }
+
+    /* Video: il player si carica solo al clic */
+    .video {
+      max-width: 900px;
+      margin: 3rem 0 .9rem;
+      position: relative;
+      aspect-ratio: 16 / 9;
+      background: #0d0d0c;
+      border: 1px solid var(--line);
+      cursor: pointer;
+      overflow: hidden;
+    }
+    .video img { width: 100%; height: 100%; object-fit: cover; display: block; opacity: .78; transition: opacity .35s ease; }
+    .video:hover img { opacity: .95; }
+    .video iframe { width: 100%; height: 100%; border: 0; display: block; }
+    .video .play {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: .9rem;
+      pointer-events: none;
+    }
+    .video .play span {
+      display: block;
+      color: var(--white);
+      font-size: .74rem;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+    .video .disc {
+      width: 68px; height: 68px;
+      border: 1px solid var(--white);
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+    }
+    .video .disc::after {
+      content: "";
+      width: 0; height: 0;
+      margin-left: 4px;
+      border-left: 15px solid var(--white);
+      border-top: 9px solid transparent;
+      border-bottom: 9px solid transparent;
+    }
+
+    /* Credits */
+    .credits {
+      max-width: 68ch;
+      margin-top: 3.5rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--line);
+      font-size: .85rem;
+      line-height: 1.9;
+      color: var(--muted);
+    }
+    .credits h2 {
+      font-weight: 400;
+      font-size: .74rem;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: 1rem;
+    }
+    .credits dl { display: grid; grid-template-columns: minmax(9rem, 14rem) 1fr; gap: .1rem 1.5rem; }
+    .credits dt { color: var(--muted); }
+    .credits dd { color: var(--cream); }
+
+    .sources {
+      max-width: 68ch;
+      margin-top: 2.6rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--line);
+      font-size: .8rem;
+      line-height: 1.85;
+      color: var(--muted);
+    }
+    .sources h2 {
+      font-weight: 400;
+      font-size: .74rem;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: 1rem;
+    }
+    .sources ul { list-style: none; }
+    .sources a { color: var(--cream); text-decoration: none; border-bottom: 1px solid #2c2c28; }
+    .sources a:hover, .sources a:focus-visible { color: var(--white); border-color: var(--white); }
+
     @media (max-width: 900px) {
       .masthead { font-size: .7rem; letter-spacing: .12em; }
+      .credits dl { grid-template-columns: 1fr; gap: 0; }
+      .credits dd { margin-bottom: .7rem; }
     }
     @media (max-width: 600px) {
       .masthead {
@@ -84,6 +254,7 @@
         font-size: .72rem;
         letter-spacing: .14em;
       }
+      .wrap { padding-inline: 1.5rem; }
     }
   </style>
 </head>
@@ -93,9 +264,200 @@
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PMR7ZSQT"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
+
   <header class="masthead">
     <a href="../portfolio.html">back</a>
-    <h1 class="tag">luka modrić</h1>
+    <p class="tag">luka modri&#263;</p>
   </header>
+
+  <main class="wrap">
+    <p class="eyebrow">Celebrity campaign &middot; 2026 FIFA World Cup</p>
+
+    <h1 class="title">One step ahead: Luka Modri&#263; for Kalshi</h1>
+
+    <p class="standfirst">The campaign image for Kalshi&rsquo;s international launch with the Croatia
+    captain, released across television and social in June 2026.</p>
+
+    <figure class="hero">
+      <img src="projects-images/luka-modric-kalshi-campaign-gabriele-compagni-1600.webp"
+           srcset="projects-images/luka-modric-kalshi-campaign-gabriele-compagni-800.webp 800w,
+                   projects-images/luka-modric-kalshi-campaign-gabriele-compagni-1600.webp 1600w"
+           sizes="(max-width: 900px) 100vw, 900px"
+           width="1600" height="2047"
+           alt="Luka Modric juggling a football in the Kalshi dressing room set, campaign image photographed by Gabriele Compagni"
+           fetchpriority="high" decoding="async" />
+      <figcaption>Luka Modri&#263;, Kalshi &mdash; &ldquo;One step ahead&rdquo;. Photography: Gabriele Compagni.
+      Post-production by the agency team on the international campaign.</figcaption>
+    </figure>
+
+    <div class="article">
+
+      <p>A dressing room in warm oak. Four shirts on hangers, the light low and even, the floor
+      swallowing everything that isn&rsquo;t the player. Modri&#263; has the ball at the height where
+      control stops looking like effort &mdash; the half-second before it drops. Everything else in
+      this campaign moves. This frame has to hold all of it without moving at all.</p>
+
+      <p>That is the discipline of <strong>celebrity campaign photography</strong>, and of the sports
+      portrait in particular: a subject the world already pictures, a set built to brand
+      specification, and less time than the picture deserves. One frame has to carry a global brand
+      onto a television end card, a phone screen and a feed, and survive all three.</p>
+
+      <h2>The partnership</h2>
+
+      <p>In June 2026 the prediction-market exchange Kalshi announced a partnership with the
+      <a href="https://news.kalshi.com/p/kalshi-croatia-football-federation-luka-modric-2026-world-cup-partnership"
+      rel="noopener">Croatian Football Federation</a> and named Luka Modri&#263; &mdash; Ballon
+      d&rsquo;Or winner, Croatia captain and AC Milan player &mdash; a global ambassador for the 2026
+      FIFA World Cup. The creative platform was &ldquo;One step ahead&rdquo;. Alongside the campaign
+      image, the launch carried a thirty-second commercial, <em>Hands</em>, built on one premise:
+      Kalshi staff using their hands for Modri&#263;, because a footballer cannot use his own. It has
+      run on United States television since
+      <a href="https://www.ispot.tv/ad/gQaW/kalshi-predictions-hands-featuring-luka-modric"
+      rel="noopener">17 June 2026</a>, with a Spanish-language cut in parallel.</p>
+
+      <h2>An international campaign</h2>
+
+      <p>Kalshi&rsquo;s tournament push ran through a roster that also included Timoth&eacute;e
+      Chalamet, J Balvin and Jos&eacute; Mourinho, built by a twenty-person in-house team
+      <a href="https://fortune.com/2026/07/21/kalshi-world-cup-marketing-war-room-ai-monoculture/"
+      rel="noopener">reading its dashboards hourly</a>. The brand added
+      <a href="https://www.cnbc.com/2026/07/19/kalshi-adds-3-million-new-users-as-company-capitalizes-on-world-cup.html"
+      rel="noopener">three million users</a> across the tournament, and its spots ranked among the
+      <a href="https://www.morningstar.com/news/business-wire/20260720199496/kalshi-oura-ring-and-att-score-the-most-engaging-ads-of-the-fifa-world-cup-2026-ranked-by-tv-outcomes-data-on-edocomworldcup"
+      rel="noopener">most engaging advertising of the 2026 World Cup</a>.</p>
+
+      <p>Modri&#263; posted the campaign image to his own account &mdash; 38.7 million followers,
+      more than 150,000 likes &mdash; under a three-word caption and a tag. Which is the entire brief
+      for an international campaign photograph: it has to work with no caption at all.</p>
+
+      <h2>The film</h2>
+
+      <div class="video" id="video" role="button" tabindex="0"
+           aria-label="Play the Kalshi and Luka Modric commercial on YouTube">
+        <img src="https://i.ytimg.com/vi/5_Qi713-NjU/hqdefault.jpg" loading="lazy"
+             width="480" height="360"
+             alt="Frame from the Kalshi commercial Hands featuring Luka Modric" />
+        <div class="play"><div class="disc"></div><span>Hands &mdash; Kalshi &times; Luka Modri&#263;</span></div>
+      </div>
+      <figcaption>Campaign film, 30&Prime;. Video: Kalshi.</figcaption>
+
+    </div>
+
+    <section class="credits">
+      <h2>Credits</h2>
+      <dl>
+        <dt>Client</dt><dd>Kalshi</dd>
+        <dt>Talent</dt><dd>Luka Modri&#263;</dd>
+        <dt>Campaign</dt><dd>&ldquo;One step ahead&rdquo; &mdash; 2026 FIFA World Cup</dd>
+        <dt>Photography</dt><dd>Gabriele Compagni</dd>
+        <dt>Year</dt><dd>2026</dd>
+      </dl>
+      <p style="margin-top:1.6rem; max-width:62ch;">Gabriele Compagni is an Italian fashion and
+      advertising photographer and video director working between Milan and New York, shooting
+      celebrity campaigns, editorial portraits and commercial campaign photography for international
+      brands. <a href="../index.html" style="color:#e8e6df; border-bottom:1px solid #2c2c28; text-decoration:none;">See more work</a>.</p>
+    </section>
+
+    <section class="sources">
+      <h2>Sources</h2>
+      <ul>
+        <li><a href="https://news.kalshi.com/p/kalshi-croatia-football-federation-luka-modric-2026-world-cup-partnership" rel="noopener">Kalshi &mdash; Partnership with the Croatian Football Federation and Luka Modri&#263;</a></li>
+        <li><a href="https://fortune.com/2026/07/21/kalshi-world-cup-marketing-war-room-ai-monoculture/" rel="noopener">Fortune &mdash; Inside Kalshi&rsquo;s World Cup marketing war room</a></li>
+        <li><a href="https://www.cnbc.com/2026/07/19/kalshi-adds-3-million-new-users-as-company-capitalizes-on-world-cup.html" rel="noopener">CNBC &mdash; Kalshi adds 3 million new users during the World Cup</a></li>
+        <li><a href="https://www.morningstar.com/news/business-wire/20260720199496/kalshi-oura-ring-and-att-score-the-most-engaging-ads-of-the-fifa-world-cup-2026-ranked-by-tv-outcomes-data-on-edocomworldcup" rel="noopener">EDO &mdash; Most engaging ads of the FIFA World Cup 2026</a></li>
+        <li><a href="https://www.ispot.tv/ad/gQaW/kalshi-predictions-hands-featuring-luka-modric" rel="noopener">iSpot.tv &mdash; Kalshi TV spot &ldquo;Hands&rdquo; featuring Luka Modri&#263;</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <script>
+    (function () {
+      var v = document.getElementById('video');
+      if (!v) return;
+      function load() {
+        v.innerHTML = '<iframe src="https://www.youtube-nocookie.com/embed/5_Qi713-NjU?autoplay=1&rel=0" ' +
+          'title="Hands - Kalshi x Luka Modric" allow="accelerometer; autoplay; encrypted-media; picture-in-picture" ' +
+          'allowfullscreen></iframe>';
+        v.style.cursor = 'default';
+        v.removeAttribute('role');
+        v.removeAttribute('tabindex');
+      }
+      v.addEventListener('click', load);
+      v.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); load(); }
+      });
+    })();
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "One step ahead: Luka Modric for Kalshi",
+    "description": "Celebrity campaign photography by Gabriele Compagni: Luka Modric for Kalshi's international campaign, 2026 FIFA World Cup.",
+    "image": "https://gabrielecompagni.com/projects/projects-images/luka-modric-kalshi-campaign-gabriele-compagni-1600.webp",
+    "datePublished": "2026-08-03",
+    "inLanguage": "en",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://gabrielecompagni.com/projects/luka-modric.html"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Gabriele Compagni",
+      "url": "https://gabrielecompagni.com/",
+      "jobTitle": "Photographer and video director"
+    },
+    "publisher": {
+      "@type": "Person",
+      "name": "Gabriele Compagni",
+      "url": "https://gabrielecompagni.com/"
+    },
+    "about": [
+      {
+        "@type": "Person",
+        "name": "Luka Modric",
+        "sameAs": [
+          "https://en.wikipedia.org/wiki/Luka_Modri%C4%87",
+          "https://www.instagram.com/lukamodric10/"
+        ]
+      },
+      {
+        "@type": "Organization",
+        "name": "Kalshi",
+        "sameAs": [
+          "https://kalshi.com/",
+          "https://www.instagram.com/kalshi/"
+        ]
+      }
+    ],
+    "mentions": [
+      {
+        "@type": "SportsTeam",
+        "name": "AC Milan",
+        "sameAs": [
+          "https://www.acmilan.com/",
+          "https://en.wikipedia.org/wiki/AC_Milan"
+        ]
+      },
+      {
+        "@type": "SportsOrganization",
+        "name": "Croatian Football Federation",
+        "sameAs": [
+          "https://hns.family/",
+          "https://en.wikipedia.org/wiki/Croatian_Football_Federation"
+        ]
+      },
+      {
+        "@type": "SportsEvent",
+        "name": "2026 FIFA World Cup",
+        "sameAs": [
+          "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup"
+        ]
+      }
+    ],
+    "keywords": "celebrity campaign photographer, international campaign photographer, commercial campaign photographer, sports portrait photographer Italy, advertising photographer Milan, Italian fashion photographer, Luka Modric, Kalshi"
+  }
+  </script>
 </body>
 </html>
