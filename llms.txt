@@ -1,0 +1,26 @@
+# Gabriele Compagni
+
+> Official website of Gabriele Compagni, an Italian photographer and video director working internationally across fashion editorials, commercial campaigns, portraits, athletes, film, and personal art projects.
+
+Gabriele Compagni works across Milan, New York, and international locations. His practice combines photography and moving image, with an emphasis on form, imperfection, sensitivity, and the unpredictability of human encounters.
+
+## Main pages
+
+- [Home](https://gabrielecompagni.com/): Introduction and main navigation.
+- [Portfolio](https://gabrielecompagni.com/portfolio.html): Selected photography and filmmaking.
+- [Biography](https://gabrielecompagni.com/bio.html): Background, artistic practice, clients, publications, celebrities, and athletes.
+- [New York](https://gabrielecompagni.com/newyork.html): Availability and production enquiries in New York.
+
+## Selected projects
+
+- [MOJEH Special Gucci](https://gabrielecompagni.com/projects/mojeh-gucci.html): Fashion editorial photographed for MOJEH Special Gucci.
+- [Luka Modric](https://gabrielecompagni.com/projects/luka-modric.html): Portrait project photographed for the global Kalshi campaign.
+
+## Contact
+
+- Email: info@gabrielecompagni.com
+
+## Crawling
+
+- [Robots](https://gabrielecompagni.com/robots.txt)
+- [Sitemap](https://gabrielecompagni.com/sitemap.xml)
